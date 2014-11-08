@@ -100,18 +100,6 @@
         android:text="@string/print"
         android:background="#2dc46c"
         />
-    <ImageButton
-        android:id="@+id/btnSettings"
-        android:src="@drawable/write3"
-        android:onClick="settings"
-        android:layout_below="@id/calSelect"
-        android:layout_toEndOf="@id/btnPrint"
-        android:layout_marginLeft="5dp"
-        android:layout_height="45dp"
-        android:layout_width="45dp"
-        android:text="@string/settings"
-        android:background="#2dc46c"
-        />
     <ImageView
         android:id="@+id/horline"
         android:layout_gravity="center_horizontal"
