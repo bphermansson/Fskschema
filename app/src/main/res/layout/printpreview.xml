@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    >
+
+<ImageButton
+        android:id="@+id/btnBack"
+        android:src="@drawable/ic_back"
+        android:onClick="back"
+        android:layout_height="45dp"
+        android:layout_width="45dp"
+        android:text="@string/btnback"
+        android:layout_margin="7dp"
+
+    />
+<ImageButton
+    android:id="@+id/printbtn"
+    android:src="@drawable/print3"
+    android:layout_height="45dp"
+    android:layout_width="45dp"
+    android:layout_toEndOf="@id/btnBack"
+    android:onClick="print"
+    android:layout_margin="5dp"
+    />
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:layout_below="@id/printbtn"
+    android:id="@+id/scroll"
+    >
+
+    <WebView
+        android:id="@+id/webInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        >
+    </WebView>
+
+</ScrollView>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/scroll"
+        android:text="©Paheco 2014"
+        />
+
+
+</RelativeLayout>

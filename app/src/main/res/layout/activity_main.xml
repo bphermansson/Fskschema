@@ -173,7 +173,6 @@
                 android:background="#CC99FF"
                                 />
         </TableRow>
-
         <TableRow>
             <TextView
                 android:id="@+id/act1"
