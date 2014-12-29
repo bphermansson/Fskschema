@@ -79,8 +79,8 @@ public class Main extends Activity {
         String smonth = String.format("%02d",calendar.get(Calendar.MONTH)+1);
         Integer day = calendar.get(Calendar.DATE);
         // Convert to strings
-        String syear = String.valueOf(year);
-        String sday = String.valueOf(day);
+        //String syear = String.valueOf(year);
+        //String sday = String.valueOf(day);
         ////Log.d("Today: ", syear + "-" + smonth  + "-" + sday);
 
         // Find calendars
