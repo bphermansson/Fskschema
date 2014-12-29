@@ -32,7 +32,10 @@
                 och välja barnets kalender. De händelser som finns inlagda i kalendern kommer då att visas i sammanställningen.
                 Under kalendernamnet visas aktuell vecka. Som standard visas aktuell vecka, och det går att bläddra i årets veckor
                 med hjälp av piltangenterna. Till höger om pilarna finns en rund symbol, peka på denna för att komma tillbaka till
-                aktuell vecka. Nästa symbol visar en skrivare. Peka på denna för att se en förhandsgranskning över det som kommer
+                aktuell vecka.
+        <img src='prev.png'>bild</img>
+
+        Nästa symbol visar en skrivare. Peka på denna för att se en förhandsgranskning över det som kommer
                 att skrivas ut. I denna förhandsgranskning kan schemat sedan skrivas ut på papper eller sparas som en PDF.
                 </string>
     <string name="hello_world">Hej</string>

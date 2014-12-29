@@ -1,5 +1,6 @@
 package nu.paheco.patrik.fskschema;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -20,6 +21,10 @@ public class help extends Activity {
         //Log.d("Help", "In onCreate()");
 
         // Create helptext with strings från strings.xml.
+
+        Integer imgP = R.drawable.print3;
+        Log.d("Bild", imgP.toString());
+
         String htmlDocument =
                 "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">" +
                         "<html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\">" +
@@ -38,6 +43,7 @@ public class help extends Activity {
         web.loadDataWithBaseURL(null, htmlDocument,
                 "text/HTML", "UTF-8", null);
 
+        /*
         TextView helptext = (TextView)findViewById(R.id.helptext);
         helptext.setTypeface(null, Typeface.BOLD);
         helptext.setText("Hjälp för Förskoleplaneraren");
@@ -52,6 +58,6 @@ public class help extends Activity {
                 "Nästa symbol visar en skrivare. Peka på denna för att se en förhandsgranskning över det som kommer att skrivas ut." +
                 "");
         //TextView curinfo=(TextView)findViewById(R.id.curinfo);
-
+        */
     }
 }

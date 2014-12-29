@@ -10,14 +10,9 @@
         >
     </WebView>
     <TextView
-        android:id="@+id/helptext"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        />
-    <TextView
         android:layout_width="fill_parent"
         android:layout_height="20dp"
-        android:layout_below="@id/helptext"
+        android:layout_below="@id/webHelp"
         android:text="©Paheco 2014"
         />
 </LinearLayout>
