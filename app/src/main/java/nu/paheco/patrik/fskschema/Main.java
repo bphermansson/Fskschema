@@ -79,9 +79,9 @@ public class Main extends Activity {
         String smonth = String.format("%02d",calendar.get(Calendar.MONTH)+1);
         Integer day = calendar.get(Calendar.DATE);
         // Convert to strings
-        //String syear = String.valueOf(year);
-        //String sday = String.valueOf(day);
-        ////Log.d("Today: ", syear + "-" + smonth  + "-" + sday);
+        String syear = String.valueOf(year);
+        String sday = String.valueOf(day);
+        Log.d("Today: ", syear + "-" + smonth  + "-" + sday);
 
         // Find calendars
         String calid[][];
@@ -243,13 +243,22 @@ public class Main extends Activity {
         //Log.d("Dir: ", dir);
 
         Calendar calendar = Calendar.getInstance();
+        Integer yearnow=calendar.get(Calendar.YEAR);
+        Log.d("Change week: Current Year, before change: ", yearnow.toString());
+
         // Get current value from textview
         TextView curinfo=(TextView)findViewById(R.id.curinfo);
         String sweeknow = curinfo.getText().toString();
-        //Log.d("Week now: ", sweeknow);
+        Log.d("Week now: ", sweeknow);
         Integer weeknow = Integer.parseInt(sweeknow);
         // Set calendar to current week
         calendar.set(Calendar.WEEK_OF_YEAR, weeknow);
+
+        yearnow=calendar.get(Calendar.YEAR);
+        Log.d("Change week: Current Year: ", yearnow.toString());
+
+        //Adjust year
+        calendar.add(calendar.YEAR, +1);
 
         // Move to last monday
         Integer c=0;
@@ -263,11 +272,18 @@ public class Main extends Activity {
             c++;
         }
 
+        //Integer woy = Calendar.
+
+        yearnow=calendar.get(Calendar.YEAR);
+        Log.d("Change week: Current Year: ", yearnow.toString());
         // Move forward or backward
         calendar.add(Calendar.WEEK_OF_YEAR, idir);
         weeknow = calendar.get(Calendar.WEEK_OF_YEAR);
         sweeknow=String.valueOf(weeknow);
-        //Log.d("Change week: Week next: ", sweeknow);
+        Log.d("Change week: Week next: ", sweeknow);
+        yearnow=calendar.get(Calendar.YEAR);
+        Log.d("Change week: Year: ", yearnow.toString());
+
         String info = String.valueOf(weeknow);
         curinfo.setText(info);
         // Convert week to start date and end date
