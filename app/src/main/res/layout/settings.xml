@@ -113,6 +113,31 @@
         android:layout_height="wrap_content"
         android:hint="@string/p2mail"
         android:inputType="text" />
-
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tagFsk"
+        />
+    <EditText
+        android:id="@+id/tagFsk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tagFsk"
+        android:inputType="text"
+        android:text="@string/tagFskPreset"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tagFree"
+        />
+    <EditText
+        android:id="@+id/tagFree"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tagFree"
+        android:inputType="text"
+        android:text="@string/tagFreePreset"
+        />
     </LinearLayout>
 </ScrollView>

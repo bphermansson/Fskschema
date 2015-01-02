@@ -24,19 +24,35 @@
     <string name="p2mobile">Vårdnadshavare 2 mobil</string>
     <string name="p1mail">Vårdnadshavare 1 e-post</string>
     <string name="p2mail">Vårdnadshavare 2 e-post</string>
+    <string name="tagFsk">Kodord för förskoletid</string>
+    <string name="tagFree">Kodord för ledig</string>
+    <string name="tagFskPreset">FSK</string>
+    <string name="tagFreePreset">Ledig</string>
     <string name="help">Hjälp</string>
-    <string name="helptext">Detta program används för att skriva ut ett schema över barnens förskoletider.<br></br>
-                För att använda programmet behövs ett Google-konto med en Google-kalender. I denna kalender skapas en särskild
-                kalender för barnet där tiderna när barnet ska vara på förskolan läggs in.
+    <string name="helptext">Förskoleschema är ett program som används för att få en tydlig översikt över barnens förskoletider.
+        Programmet visar till skillnad från andra kalenderappar både start- och sluttid, och det finns även möjlighet att skriva
+        ut ett schema att lämna till förskolan.
+        <br></br>
+                För att använda programmet behövs ett Google-konto och en Google-kalender. I denna kalender skapas en särskild
+                kalender för barnet där tiderna när barnet ska vara på förskolan läggs in. För att appen ska veta att det är
+                förskolertider används ett särskilt kodord som \'Fsk\' eller \'Förskola\'. För dagar när barnet är ledigt används
+                \"Ledig\" eller liknande som beskrivning för kalenderhändelsen. Dessa kodord kan ändras i appens inställningar.
+        <br></br>
+        <b>Huvudvyn</b>
                 Överst i Förskoleplaneraren syns namnet på din Google-kalender. Har du flera kalendrar kan du peka på namnet
                 och välja barnets kalender. De händelser som finns inlagda i kalendern kommer då att visas i sammanställningen.
-                Under kalendernamnet visas aktuell vecka. Som standard visas aktuell vecka, och det går att bläddra i årets veckor
+                Under kalendernamnet visas aktuell vecka. Som standard visas innevarande vecka, och det går att bläddra i årets veckor
                 med hjälp av piltangenterna. Till höger om pilarna finns en rund symbol, peka på denna för att komma tillbaka till
-                aktuell vecka.
-        <img src='prev.png'>bild</img>
-
+                innevarande vecka.
+        <br></br>
+        <b>Skriv ut</b>
         Nästa symbol visar en skrivare. Peka på denna för att se en förhandsgranskning över det som kommer
                 att skrivas ut. I denna förhandsgranskning kan schemat sedan skrivas ut på papper eller sparas som en PDF.
+        <b></b>
+        Inställningar
+        <br></br>
+        I appens inställningar kan man fylla i barnets namn, telefonnummer med mera. Dessa uppgifter används som kontaktuppgifter
+        i det schema som skrivs ut.
                 </string>
     <string name="hello_world">Hej</string>
     <string name="action_settings">Inställningar</string>

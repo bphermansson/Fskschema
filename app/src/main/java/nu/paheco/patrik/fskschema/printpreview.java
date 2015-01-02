@@ -2,6 +2,7 @@ package nu.paheco.patrik.fskschema;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
@@ -49,6 +50,8 @@ public class printpreview extends Activity {
         String p2mobile = getSharedPreferences("settings", MODE_PRIVATE).getString("p2mobile","");
         String p1mail = getSharedPreferences("settings", MODE_PRIVATE).getString("p1mail","");
         String p2mail = getSharedPreferences("settings", MODE_PRIVATE).getString("p2mail","");
+        String tagFsk = getSharedPreferences("settings", MODE_PRIVATE).getString("tagFsk","");
+        String tagFree = getSharedPreferences("settings", MODE_PRIVATE).getString("tagFree","");
 
         //Log.d ("Stored name: ", kidsname);
 
@@ -58,15 +61,15 @@ public class printpreview extends Activity {
         String sweeknow = Constants.week;
         Integer iweeknow = Integer.valueOf(sweeknow);
         Integer endweek = Integer.valueOf(sweeknow)+5;
-        Log.d("Fetched week:", sweeknow + "-" + String.valueOf(endweek));
+        //Log.d("Fetched week:", sweeknow + "-" + String.valueOf(endweek));
         String[] arrday = Constants.arrdayStore;
         //String[] arrDayMonth = Constants.arrdayMonthStore;
         String[] arrdate = Constants.arrdateStore;
         Integer noofdays = 41;
-        Log.d("enddate: ", arrdate[noofdays]);
+        //Log.d("enddate: ", arrdate[noofdays]);
 
         Integer noofevents = Constants.noofevents;
-        Log.d("No of events:", String.valueOf(noofevents));
+        //Log.d("No of events:", String.valueOf(noofevents));
 
         // Start create html for webview
         // Upper table with info about parents and kid
@@ -152,7 +155,7 @@ public class printpreview extends Activity {
                             eventFlag = 1; // An event was found
                             // Find event description
                             String desc = Constants.arreventsStore[x][1];
-                            Log.d("Desc: ", desc);
+                            //Log.d("Desc: ", desc);
                             // Find end time
                             String end = Constants.arreventsStore[x][3];
                             Long de = Long.valueOf(end);
@@ -167,10 +170,19 @@ public class printpreview extends Activity {
                                     TimeUnit.MILLISECONDS.toHours(idur),
                                     TimeUnit.MILLISECONDS.toMinutes(idur) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(idur))
                             );
-                            Log.d("sdur: ", sdur);
+                            //Log.d("sdur: ", sdur);
 
                             // Add info to Gui
-                            if (desc.equals("Ledig")) {
+                            String scodeFsk = getResources().getString(R.string.tagFsk);
+                            String scodeFree = getResources().getString(R.string.tagFree);
+
+                            //String tagFsk = getPreferences(MODE_PRIVATE).getString("tagFsk","");
+                            //String tagFree = getPreferences(MODE_PRIVATE).getString("tagFree","");
+
+                            Log.d("TAG", "tagFsk = " + tagFsk);
+                            Log.d("TAG", "tagFree = " + tagFree);
+
+                            if (desc.equals(tagFree)) {
                                 htmlDocument = htmlDocument + "<td>&nbsp</td>";
                                 htmlDocument = htmlDocument + "<td>&nbsp</td>";
                                 htmlDocument = htmlDocument + "<td>" + desc + "</td>";

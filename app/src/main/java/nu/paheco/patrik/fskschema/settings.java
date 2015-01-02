@@ -1,6 +1,7 @@
 package nu.paheco.patrik.fskschema;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -36,6 +37,8 @@ public class settings extends Activity {
         EditText ep2mobile=(EditText)findViewById(R.id.p2mobile);
         EditText ep1mail=(EditText)findViewById(R.id.p1mail);
         EditText ep2mail=(EditText)findViewById(R.id.p2mail);
+        EditText etagFsk=(EditText)findViewById(R.id.tagFsk);
+        EditText etagFree=(EditText)findViewById(R.id.tagFree);
 
         // Get stored settings
         String kidsname = getPreferences(MODE_PRIVATE).getString("kidsname", "");
@@ -55,6 +58,8 @@ public class settings extends Activity {
         String p2mobile = getPreferences(MODE_PRIVATE).getString("p2mobile","");
         String p1mail = getPreferences(MODE_PRIVATE).getString("p1mail","");
         String p2mail = getPreferences(MODE_PRIVATE).getString("p2mail","");
+        String tagFsk = getPreferences(MODE_PRIVATE).getString("tagFsk","FSK");
+        String tagFree = getPreferences(MODE_PRIVATE).getString("tagFree","Ledig");
 
         // Write stored data to gui elements
         Ekidsname.setText(kidsname);
@@ -74,6 +79,8 @@ public class settings extends Activity {
         ep2mobile.setText(p2mobile);
         ep1mail.setText(p1mail);
         ep2mail.setText(p2mail);
+        etagFsk.setText(tagFsk);
+        etagFree.setText(tagFree);
 
     }
 
@@ -98,6 +105,8 @@ public class settings extends Activity {
         EditText p2mobile=(EditText)findViewById(R.id.p2mobile);
         EditText p1mail=(EditText)findViewById(R.id.p1mail);
         EditText p2mail=(EditText)findViewById(R.id.p2mail);
+        EditText tagFsk=(EditText)findViewById(R.id.tagFsk);
+        EditText tagFree=(EditText)findViewById(R.id.tagFree);
 
         //Log.d("Kids name", kidsname.getText().toString());
         getPreferences(MODE_PRIVATE).edit().putString("kidsname",kidsname.getText().toString()).commit();
@@ -117,7 +126,8 @@ public class settings extends Activity {
         getPreferences(MODE_PRIVATE).edit().putString("p2mobile",p2mobile.getText().toString()).commit();
         getPreferences(MODE_PRIVATE).edit().putString("p1mail",p1mail.getText().toString()).commit();
         getPreferences(MODE_PRIVATE).edit().putString("p2mail",p2mail.getText().toString()).commit();
-
+        getPreferences(MODE_PRIVATE).edit().putString("tagFsk",tagFsk.getText().toString()).commit();
+        getPreferences(MODE_PRIVATE).edit().putString("tagFree",tagFree.getText().toString()).commit();
 
         super.onBackPressed();
     }

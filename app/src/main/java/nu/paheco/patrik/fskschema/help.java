@@ -8,6 +8,8 @@ import android.util.Log;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import java.net.URLEncoder;
+
 import nu.paheco.patrik.mycalendar.R;
 
 /**
@@ -22,8 +24,8 @@ public class help extends Activity {
 
         // Create helptext with strings från strings.xml.
 
-        Integer imgP = R.drawable.print3;
-        Log.d("Bild", imgP.toString());
+        //Integer imgP = R.drawable.print3;
+        //Log.d("Bild", imgP.toString());
 
         String htmlDocument =
                 "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">" +
@@ -37,12 +39,13 @@ public class help extends Activity {
                         getResources().getString(R.string.helptext) +
                         "</body></html>";
 
+        String mimeType = "text/html";
+        String encoding = "utf-8";
 
-
-                        WebView web = (WebView)findViewById(R.id.webHelp);
-        web.loadDataWithBaseURL(null, htmlDocument,
-                "text/HTML", "UTF-8", null);
-
+        WebView web = (WebView)findViewById(R.id.webHelp);
+        //web.loadDataWithBaseURL(null, htmlDocument,
+        //        "text/HTML", "UTF-8", null);
+        web.loadData(htmlDocument, mimeType, encoding);
         /*
         TextView helptext = (TextView)findViewById(R.id.helptext);
         helptext.setTypeface(null, Typeface.BOLD);

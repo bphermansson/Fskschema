@@ -1,3 +1,10 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg"
+    >
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:layout_width="fill_parent"
@@ -31,16 +38,16 @@
         android:id="@+id/calSelect"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#e5e5e5"
+        android:background="@color/headline"
         android:layout_marginBottom="5dp"
         />
     <TextView
         android:id="@+id/week"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="45dp"
         android:layout_below="@id/calSelect"
         android:text="@string/week"
-        android:textSize="16dp"
+        android:textSize="20dp"
         android:gravity="center"
         />
     <TextView
@@ -49,7 +56,7 @@
         android:id="@+id/curinfo"
         android:layout_toRightOf="@id/week"
         android:layout_below="@id/calSelect"
-        android:textSize="16dp"
+        android:textSize="20dp"
         android:gravity="center"
         android:layout_marginEnd="5dp"
         />
@@ -63,7 +70,7 @@
         android:layout_toRightOf="@id/curinfo"
         android:layout_height="45dp"
         android:layout_width="45dp"
-        android:background="#2dc46c"
+        android:layout_marginEnd="5dp"
         />
     <ImageButton
         android:id="@+id/btnNext"
@@ -74,8 +81,7 @@
         android:layout_height="45dp"
         android:layout_width="45dp"
         android:layout_marginLeft="5dp"
-        android:background="#2dc46c"
-
+        android:layout_marginEnd="5dp"
         />
     <ImageButton
         android:id="@+id/btnToday"
@@ -86,7 +92,7 @@
         android:layout_height="45dp"
         android:layout_width="45dp"
         android:layout_marginLeft="5dp"
-        android:background="#2dc46c"
+        android:layout_marginEnd="5dp"
         />
     <ImageButton
         android:id="@+id/btnPrint"
@@ -97,8 +103,7 @@
         android:layout_height="45dp"
         android:layout_width="45dp"
         android:layout_marginLeft="5dp"
-        android:text="@string/print"
-        android:background="#2dc46c"
+        android:layout_marginEnd="5dp"
         />
     <ImageView
         android:id="@+id/horline"
@@ -129,15 +134,17 @@
                 android:layout_width="fill_parent"
                 android:text="Date 0"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
+                android:background="@color/headline"
                 android:paddingRight="10dp"
+                android:padding="5dp"
                 />
             <TextView
                 android:id="@+id/textView0"
                 android:layout_width="fill_parent"
                 android:text="Row 0"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
+                android:background="@color/headline"
+                android:padding="5dp"
                 />
         </TableRow>
         <TableRow
@@ -163,15 +170,17 @@
                 android:layout_width="fill_parent"
                 android:text="Date 1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                               />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="fill_parent"
                 android:text="Column 1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
         </TableRow>
         <TableRow>
             <TextView
@@ -191,15 +200,17 @@
                 android:layout_width="fill_parent"
                 android:text="Date 2"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="fill_parent"
                 android:text="Column 1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
         </TableRow>
 
         <TableRow>
@@ -221,15 +232,17 @@
                 android:layout_width="fill_parent"
                 android:text="Date 3"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="fill_parent"
                 android:text="Column 1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
         </TableRow>
 
         <TableRow>
@@ -251,15 +264,17 @@
                 android:layout_width="fill_parent"
                 android:text="Date 4"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="fill_parent"
                 android:text="Column 1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
         </TableRow>
         <TableRow>
             <TextView
@@ -280,15 +295,17 @@
                 android:layout_width="fill_parent"
                 android:text="Date 5"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                               />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="fill_parent"
                 android:text="Column 1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
 
         </TableRow>
 
@@ -312,15 +329,17 @@
                 android:layout_width="fill_parent"
                 android:text="Date 6"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="fill_parent"
                 android:text="Column 1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:background="#CC99FF"
-                                />
+                android:background="@color/headline"
+                android:padding="5dp"
+                />
         </TableRow>
         <TableRow>
             <TextView
@@ -334,3 +353,4 @@
     </TableLayout>
 </RelativeLayout>
 </ScrollView>
+</LinearLayout>

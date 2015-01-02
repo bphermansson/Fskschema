@@ -81,7 +81,7 @@ public class Main extends Activity {
         // Convert to strings
         String syear = String.valueOf(year);
         String sday = String.valueOf(day);
-        Log.d("Today: ", syear + "-" + smonth  + "-" + sday);
+        //Log.d("Today: ", syear + "-" + smonth  + "-" + sday);
 
         // Find calendars
         String calid[][];
@@ -244,21 +244,21 @@ public class Main extends Activity {
 
         Calendar calendar = Calendar.getInstance();
         Integer yearnow=calendar.get(Calendar.YEAR);
-        Log.d("Change week: Current Year, before change: ", yearnow.toString());
+        //Log.d("Change week: Current Year, before change: ", yearnow.toString());
 
         // Get current value from textview
         TextView curinfo=(TextView)findViewById(R.id.curinfo);
         String sweeknow = curinfo.getText().toString();
-        Log.d("Week now: ", sweeknow);
+        //Log.d("Week now: ", sweeknow);
         Integer weeknow = Integer.parseInt(sweeknow);
         // Set calendar to current week
         calendar.set(Calendar.WEEK_OF_YEAR, weeknow);
 
         yearnow=calendar.get(Calendar.YEAR);
-        Log.d("Change week: Current Year: ", yearnow.toString());
+        //Log.d("Change week: Current Year: ", yearnow.toString());
 
         //Adjust year
-        calendar.add(calendar.YEAR, +1);
+        //calendar.add(calendar.YEAR, +1);
 
         // Move to last monday
         Integer c=0;
@@ -275,14 +275,14 @@ public class Main extends Activity {
         //Integer woy = Calendar.
 
         yearnow=calendar.get(Calendar.YEAR);
-        Log.d("Change week: Current Year: ", yearnow.toString());
+        //Log.d("Change week: Current Year: ", yearnow.toString());
         // Move forward or backward
         calendar.add(Calendar.WEEK_OF_YEAR, idir);
         weeknow = calendar.get(Calendar.WEEK_OF_YEAR);
         sweeknow=String.valueOf(weeknow);
-        Log.d("Change week: Week next: ", sweeknow);
+        //Log.d("Change week: Week next: ", sweeknow);
         yearnow=calendar.get(Calendar.YEAR);
-        Log.d("Change week: Year: ", yearnow.toString());
+        //Log.d("Change week: Year: ", yearnow.toString());
 
         String info = String.valueOf(weeknow);
         curinfo.setText(info);
@@ -609,11 +609,19 @@ public class Main extends Activity {
                     );
                     //Log.d("sdur: ", sdur);
 
-
+                    // Set activity text according to calendar value
                     TextView tvact = (TextView ) findViewById(textViewIDsact[tc]);
                     //tvact.append(sdesc+"   "+getResources().getString(R.string.kl)+" "+timestart+"-"+timeend+"\n");
-                    if (sdesc.equals("Ledig")) {
-                        tvact.append("Ledig\n");
+                    String scodeFsk = getResources().getString(R.string.tagFsk);
+                    String scodeFree = getResources().getString(R.string.tagFree);
+                    String tagFsk = getPreferences(MODE_PRIVATE).getString("tagFsk","FSK");
+                    String tagFree = getPreferences(MODE_PRIVATE).getString("tagFree","Ledig");
+                    //Log.d("TAG", "tagFsk = " + tagFsk);
+                    //Log.d("TAG", "tagFree = " + tagFree);
+
+                    if (sdesc.equals(tagFree)) {
+                        Log.d("TAG", "Free!");
+                        tvact.append(scodeFree+ "\n");
                     }
                     else {
                         tvact.append(timestart + "-" + timeend + " (" + sdur + "): " + sdesc + "\n");

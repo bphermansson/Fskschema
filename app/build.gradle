@@ -14,8 +14,9 @@ android {
     buildTypes {
         release {
             apply plugin: 'checkstyle'
-//            runProguard false
-//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            //runProgurd false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
