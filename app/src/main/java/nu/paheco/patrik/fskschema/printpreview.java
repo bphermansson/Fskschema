@@ -30,7 +30,7 @@ public class printpreview extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("Printpreview", "In onCreate()");
+        //Log.d("Printpreview", "In onCreate()");
 
         // Get stored shared settings from "settings"
         String kidsname = getSharedPreferences("settings", MODE_PRIVATE).getString("kidsname", "");
@@ -176,18 +176,15 @@ public class printpreview extends Activity {
                             String scodeFsk = getResources().getString(R.string.tagFsk);
                             String scodeFree = getResources().getString(R.string.tagFree);
 
-                            //String tagFsk = getPreferences(MODE_PRIVATE).getString("tagFsk","");
-                            //String tagFree = getPreferences(MODE_PRIVATE).getString("tagFree","");
-
-                            Log.d("TAG", "tagFsk = " + tagFsk);
-                            Log.d("TAG", "tagFree = " + tagFree);
+                            //Log.d("TAG", "tagFsk = " + tagFsk);
+                            //Log.d("TAG", "tagFree = " + tagFree);
 
                             if (desc.equals(tagFree)) {
                                 htmlDocument = htmlDocument + "<td>&nbsp</td>";
                                 htmlDocument = htmlDocument + "<td>&nbsp</td>";
                                 htmlDocument = htmlDocument + "<td>" + desc + "</td>";
                             }
-                            else {
+                            else if (desc.equals(tagFsk)){
                                 htmlDocument = htmlDocument + "<td>" + starttime + "</td>";
                                 htmlDocument = htmlDocument + "<td>" + endtime + "</td>";
                                 htmlDocument = htmlDocument + "<td>" + sdur + "</td>";

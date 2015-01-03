@@ -32,7 +32,7 @@
     <string name="helptext">Förskoleschema är ett program som används för att få en tydlig översikt över barnens förskoletider.
         Programmet visar till skillnad från andra kalenderappar både start- och sluttid, och det finns även möjlighet att skriva
         ut ett schema att lämna till förskolan.
-        <br></br>
+        <br></br><br></br><br></br>
                 För att använda programmet behövs ett Google-konto och en Google-kalender. I denna kalender skapas en särskild
                 kalender för barnet där tiderna när barnet ska vara på förskolan läggs in. För att appen ska veta att det är
                 förskolertider används ett särskilt kodord som \'Fsk\' eller \'Förskola\'. För dagar när barnet är ledigt används
