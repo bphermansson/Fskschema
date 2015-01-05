@@ -1,4 +1,4 @@
-<LinearLayout
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -351,6 +351,19 @@
                 />
         </TableRow>
     </TableLayout>
+
+    <fragment android:name="nu.paheco.patrik.fskschema.Main$PlaceholderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adFragment" />
+
+    <fragment android:name="nu.paheco.patrik.fskschema.Main$AdFragment"
+        android:id="@+id/adFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
 </RelativeLayout>
 </ScrollView>
 </LinearLayout>
