@@ -31,7 +31,8 @@ import java.util.concurrent.TimeUnit;
 
 import nu.paheco.patrik.mycalendar.R;
 
-
+// TODO Option to send reminders about pickup/leave-times.
+// Ie send a notification to user half an hour before pickup.
 public class Main extends Activity {
     private Cursor mCursor = null;
     public static final String[] EVENT_PROJECTION = new String[] {
@@ -69,6 +70,8 @@ public class Main extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ////Log.d("TAG", "In onCreate()");
+
+        // TODO Fix year change error
 
         // Which calendar was selected last time? Get value.
         String lastCalid = getPreferences(MODE_PRIVATE).getString("calpos", "");
@@ -1009,6 +1012,7 @@ public class Main extends Activity {
     /**
      * A placeholder fragment containing a simple view. This fragment
      * would include your content.
+     * https://developers.google.com/mobile-ads-sdk/docs/admob/android/quick-start#introduction
      */
     public static class PlaceholderFragment extends Fragment {
 
@@ -1027,6 +1031,11 @@ public class Main extends Activity {
      * This class makes the ad request and loads the ad.
      */
     public static class AdFragment extends Fragment {
+        private AdView mAdView;
+
+        public AdFragment() {
+        }
+
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -1041,6 +1050,4 @@ public class Main extends Activity {
             mAdView.loadAd(adRequest);
         }
     }
-
-
 }
