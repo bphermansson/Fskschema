@@ -353,15 +353,18 @@
     </TableLayout>
 
     <fragment android:name="nu.paheco.patrik.fskschema.Main$PlaceholderFragment"
+        android:id="@+id/placeholder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/adFragment" />
+        android:layout_above="@+id/adFragment"
+        tools:layout="@layout/fragment_ad" />
 
     <fragment android:name="nu.paheco.patrik.fskschema.Main$AdFragment"
         android:id="@+id/adFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/fragment_ad" />
 
 
 </RelativeLayout>
