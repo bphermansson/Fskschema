@@ -412,12 +412,24 @@ public class Main extends Activity {
             txtdate0.setTypeface(null, Typeface.BOLD);
             txtDay0.setTypeface(null, Typeface.BOLD);
         }
+        else {
+            txtdate0.setTextColor(Color.BLACK);
+            txtDay0.setTextColor(Color.BLACK);
+            txtdate0.setTypeface(null, Typeface.NORMAL);
+            txtDay0.setTypeface(null, Typeface.NORMAL);
+        }
         txtDay1.setText(arrDay[1]);
         if (arrDate[1].equals(todaysdate)) {
             txtdate1.setTextColor(Color.RED);
             txtDay1.setTextColor(Color.RED);
             txtdate1.setTypeface(null, Typeface.BOLD);
             txtDay1.setTypeface(null, Typeface.BOLD);
+        }
+        else {
+            txtdate1.setTextColor(Color.BLACK);
+            txtDay1.setTextColor(Color.BLACK);
+            txtdate1.setTypeface(null, Typeface.NORMAL);
+            txtDay1.setTypeface(null, Typeface.NORMAL);
         }
         txtDay2.setText(arrDay[2]);
         if (arrDate[2].equals(todaysdate)) {
@@ -426,12 +438,24 @@ public class Main extends Activity {
             txtdate2.setTypeface(null, Typeface.BOLD);
             txtDay2.setTypeface(null, Typeface.BOLD);
         }
+        else {
+            txtdate2.setTextColor(Color.BLACK);
+            txtDay2.setTextColor(Color.BLACK);
+            txtdate2.setTypeface(null, Typeface.NORMAL);
+            txtDay2.setTypeface(null, Typeface.NORMAL);
+        }
         txtDay3.setText(arrDay[3]);
         if (arrDate[3].equals(todaysdate)) {
             txtdate3.setTextColor(Color.RED);
             txtDay3.setTextColor(Color.RED);
             txtdate3.setTypeface(null, Typeface.BOLD);
             txtDay3.setTypeface(null, Typeface.BOLD);
+        }
+        else {
+            txtdate3.setTextColor(Color.BLACK);
+            txtDay3.setTextColor(Color.BLACK);
+            txtdate3.setTypeface(null, Typeface.NORMAL);
+            txtDay3.setTypeface(null, Typeface.NORMAL);
         }
         txtDay4.setText(arrDay[4]);
         if (arrDate[4].equals(todaysdate)) {
@@ -440,6 +464,12 @@ public class Main extends Activity {
             txtdate4.setTypeface(null, Typeface.BOLD);
             txtDay4.setTypeface(null, Typeface.BOLD);
         }
+        else {
+            txtdate4.setTextColor(Color.BLACK);
+            txtDay4.setTextColor(Color.BLACK);
+            txtdate4.setTypeface(null, Typeface.NORMAL);
+            txtDay4.setTypeface(null, Typeface.NORMAL);
+        }
         txtDay5.setText(arrDay[5]);
         if (arrDate[5].equals(todaysdate)) {
             txtdate5.setTextColor(Color.RED);
@@ -447,12 +477,24 @@ public class Main extends Activity {
             txtdate5.setTypeface(null, Typeface.BOLD);
             txtDay5.setTypeface(null, Typeface.BOLD);
         }
+        else {
+            txtdate5.setTextColor(Color.BLACK);
+            txtDay5.setTextColor(Color.BLACK);
+            txtdate5.setTypeface(null, Typeface.NORMAL);
+            txtDay5.setTypeface(null, Typeface.NORMAL);
+        }
         txtDay6.setText(arrDay[6]);
         if (arrDate[6].equals(todaysdate)) {
             txtdate6.setTextColor(Color.RED);
             txtDay6.setTextColor(Color.RED);
             txtdate6.setTypeface(null, Typeface.BOLD);
             txtDay6.setTypeface(null, Typeface.BOLD);
+        }
+        else {
+            txtdate6.setTextColor(Color.BLACK);
+            txtDay6.setTextColor(Color.BLACK);
+            txtdate6.setTypeface(null, Typeface.NORMAL);
+            txtDay6.setTypeface(null, Typeface.NORMAL);
         }
         txtdate0.setText(arrDate[0]);
         txtdate1.setText(arrDate[1]);
