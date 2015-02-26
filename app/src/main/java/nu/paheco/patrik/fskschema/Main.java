@@ -8,6 +8,7 @@ import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract;
@@ -408,36 +409,50 @@ public class Main extends Activity {
         if (arrDate[0].equals(todaysdate)) {
             txtdate0.setTextColor(Color.RED);
             txtDay0.setTextColor(Color.RED);
+            txtdate0.setTypeface(null, Typeface.BOLD);
+            txtDay0.setTypeface(null, Typeface.BOLD);
         }
         txtDay1.setText(arrDay[1]);
         if (arrDate[1].equals(todaysdate)) {
             txtdate1.setTextColor(Color.RED);
             txtDay1.setTextColor(Color.RED);
+            txtdate1.setTypeface(null, Typeface.BOLD);
+            txtDay1.setTypeface(null, Typeface.BOLD);
         }
         txtDay2.setText(arrDay[2]);
         if (arrDate[2].equals(todaysdate)) {
             txtdate2.setTextColor(Color.RED);
             txtDay2.setTextColor(Color.RED);
+            txtdate2.setTypeface(null, Typeface.BOLD);
+            txtDay2.setTypeface(null, Typeface.BOLD);
         }
         txtDay3.setText(arrDay[3]);
         if (arrDate[3].equals(todaysdate)) {
             txtdate3.setTextColor(Color.RED);
             txtDay3.setTextColor(Color.RED);
+            txtdate3.setTypeface(null, Typeface.BOLD);
+            txtDay3.setTypeface(null, Typeface.BOLD);
         }
         txtDay4.setText(arrDay[4]);
         if (arrDate[4].equals(todaysdate)) {
             txtdate4.setTextColor(Color.RED);
             txtDay4.setTextColor(Color.RED);
+            txtdate4.setTypeface(null, Typeface.BOLD);
+            txtDay4.setTypeface(null, Typeface.BOLD);
         }
         txtDay5.setText(arrDay[5]);
         if (arrDate[5].equals(todaysdate)) {
             txtdate5.setTextColor(Color.RED);
             txtDay5.setTextColor(Color.RED);
+            txtdate5.setTypeface(null, Typeface.BOLD);
+            txtDay5.setTypeface(null, Typeface.BOLD);
         }
         txtDay6.setText(arrDay[6]);
         if (arrDate[6].equals(todaysdate)) {
             txtdate6.setTextColor(Color.RED);
             txtDay6.setTextColor(Color.RED);
+            txtdate6.setTypeface(null, Typeface.BOLD);
+            txtDay6.setTypeface(null, Typeface.BOLD);
         }
         txtdate0.setText(arrDate[0]);
         txtdate1.setText(arrDate[1]);
