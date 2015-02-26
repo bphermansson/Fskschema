@@ -37,6 +37,8 @@
     <string name="tagFreePreset">Free</string>
 
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="tagReminder">Påminnelsetid</string>
+    <string name="tagReminderPreset">30</string>
 
     <color name="bg">#F6FFFF</color>
     <color name="headline">#B8E6E6</color>

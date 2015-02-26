@@ -2,4 +2,5 @@
 <resources>
     <string name="help">help</string>
     <string name="btnback">Back</string>
+    <string name="tagReminder">Påminnelsetid</string>
 </resources>

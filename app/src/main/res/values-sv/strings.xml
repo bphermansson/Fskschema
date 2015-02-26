@@ -57,6 +57,8 @@
     <string name="hello_world">Hej</string>
     <string name="action_settings">Inställningar</string>
     <string name="btnback">Tillbaka</string>
+    <string name="tagReminder">Påminnelsetid</string>
 
+    <string name="tagReminderPreset">30</string>
 
 </resources>

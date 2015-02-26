@@ -1,10 +1,13 @@
 package nu.paheco.patrik.fskschema;
 
+//TODO Create button(?) to call FSK
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract;
@@ -90,6 +93,7 @@ public class Main extends Activity {
         // Convert to strings
         String syear = String.valueOf(year);
         String sday = String.valueOf(day);
+        //String todaysdate = syear + "/" + smonth  + "/" + sday;
         //Log.d("Today: ", syear + "-" + smonth  + "-" + sday);
 
         // Find calendars
@@ -108,7 +112,7 @@ public class Main extends Activity {
         String date = findLastMon();
         ////Log.d("Last monday was: ", date);
 
-        // Show weekdays and dates in Gui. Provide date for last monday, = start date for list
+        // Show weekdays and dates in Gui. Provide date for last monday, = start date for list and tpdays date
         listDays(date);
 
         // Convert string info to int
@@ -327,7 +331,18 @@ public class Main extends Activity {
         //Log.d("Class: ", "listDays");
         ////Log.d("Start date: ", date);
 
-        // Split string in year, month, day
+        Calendar calendar = Calendar.getInstance();
+
+        // Todays date
+        Integer year = calendar.get(Calendar.YEAR);
+        String smonth = String.format("%02d",calendar.get(Calendar.MONTH)+1);
+        Integer day = calendar.get(Calendar.DATE);
+        // Convert to strings
+        String syear = String.valueOf(year);
+        String sday = String.valueOf(day);
+        String todaysdate = syear + "/" + smonth  + "/" + sday;
+
+        // Split date string in year, month, day
         String[] separated = date.split("/");
         String syeardate=separated[0];
         Integer iyeardate=Integer.parseInt(syeardate);
@@ -336,7 +351,6 @@ public class Main extends Activity {
         String sdaydate=separated[2];
         Integer idaydate=Integer.parseInt(sdaydate);
 
-        Calendar calendar = Calendar.getInstance();
         //Set start date
         calendar.set(Calendar.YEAR, iyeardate);
         calendar.set(Calendar.MONTH, imonthdate);
@@ -368,20 +382,21 @@ public class Main extends Activity {
             // Get weekday
             arrDay[c] = dayFormat.format(calendar.getTime());
             // Get date
-            Integer year = calendar.get(Calendar.YEAR);
-            String smonth = String.format("%02d",calendar.get(Calendar.MONTH)+1);
-            String sday = String.format("%02d",calendar.get(Calendar.DATE));
+            year = calendar.get(Calendar.YEAR);
+            smonth = String.format("%02d",calendar.get(Calendar.MONTH)+1);
+            sday = String.format("%02d",calendar.get(Calendar.DATE));
             // Convert to strings
-            String syear = String.valueOf(year);
+            syear = String.valueOf(year);
             arrDate[c] = syear + "/" + smonth  + "/" + sday;
             calendar.add(calendar.DATE,+1);
         }
         // Rewind
         calendar.add(calendar.DATE,-7);
 
-        Integer day = calendar.get(Calendar.DATE);
-        String sday = String.valueOf(day);
-        ////Log.d("Rewind to ",sday);
+        day = calendar.get(Calendar.DATE);
+        sday = String.valueOf(day);
+
+        Log.e("Today ",todaysdate);
 
         //Store
         Constants.arrdayStore=arrDay;
@@ -390,13 +405,40 @@ public class Main extends Activity {
         // Add weekdays to Gui
         // We have fetched four weeks, but the main Gui just shows the first week.
         txtDay0.setText(arrDay[0]);
+        if (arrDate[0].equals(todaysdate)) {
+            txtdate0.setTextColor(Color.RED);
+            txtDay0.setTextColor(Color.RED);
+        }
         txtDay1.setText(arrDay[1]);
+        if (arrDate[1].equals(todaysdate)) {
+            txtdate1.setTextColor(Color.RED);
+            txtDay1.setTextColor(Color.RED);
+        }
         txtDay2.setText(arrDay[2]);
+        if (arrDate[2].equals(todaysdate)) {
+            txtdate2.setTextColor(Color.RED);
+            txtDay2.setTextColor(Color.RED);
+        }
         txtDay3.setText(arrDay[3]);
+        if (arrDate[3].equals(todaysdate)) {
+            txtdate3.setTextColor(Color.RED);
+            txtDay3.setTextColor(Color.RED);
+        }
         txtDay4.setText(arrDay[4]);
+        if (arrDate[4].equals(todaysdate)) {
+            txtdate4.setTextColor(Color.RED);
+            txtDay4.setTextColor(Color.RED);
+        }
         txtDay5.setText(arrDay[5]);
+        if (arrDate[5].equals(todaysdate)) {
+            txtdate5.setTextColor(Color.RED);
+            txtDay5.setTextColor(Color.RED);
+        }
         txtDay6.setText(arrDay[6]);
-
+        if (arrDate[6].equals(todaysdate)) {
+            txtdate6.setTextColor(Color.RED);
+            txtDay6.setTextColor(Color.RED);
+        }
         txtdate0.setText(arrDate[0]);
         txtdate1.setText(arrDate[1]);
         txtdate2.setText(arrDate[2]);

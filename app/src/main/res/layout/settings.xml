@@ -139,5 +139,14 @@
         android:inputType="text"
         android:text="@string/tagFreePreset"
         />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/tagReminder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tagReminder"
+        android:inputType="text"
+        android:text="@string/tagReminderPreset"
+        />
+
+</LinearLayout>
 </ScrollView>
