@@ -396,7 +396,7 @@ public class Main extends Activity {
         day = calendar.get(Calendar.DATE);
         sday = String.valueOf(day);
 
-        Log.e("Today ",todaysdate);
+        //Log.e("Today ",todaysdate);
 
         //Store
         Constants.arrdayStore=arrDay;
