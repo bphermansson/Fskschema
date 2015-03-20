@@ -342,6 +342,7 @@ public class Main extends Activity {
         String syear = String.valueOf(year);
         String sday = String.valueOf(day);
         String todaysdate = syear + "/" + smonth  + "/" + sday;
+        String realdate = todaysdate;
 
         // Split date string in year, month, day
         String[] separated = date.split("/");
